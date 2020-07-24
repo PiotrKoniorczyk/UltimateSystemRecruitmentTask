@@ -17,11 +17,12 @@ public class OrderController {
     private final OrderService orderService;
 
     @GetMapping("/orders")
-    public List<OrderDto> getPosts(@RequestParam(required = false) Integer page, Sort.Direction sort){
+    public List<OrderDto> getOrder(@RequestParam(required = false) Integer page, Sort.Direction sort){
         int pageNumber = page != null && page >= 0 ? page : 0;
         Sort.Direction sortDirection = sort != null ? sort : Sort.Direction.ASC;
         return OrderDtoMapper.mapToOrderDtos(orderService.getOrder(pageNumber, sortDirection));
     }
+
 
     @GetMapping("/orders/{id}")
     public Order getSingleOrder(@PathVariable long id) {
