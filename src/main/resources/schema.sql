@@ -1,0 +1,8 @@
+CREATE TABLE ORDERS (
+  id BIGINT AUTO_INCREMENT  PRIMARY KEY,
+  productName VARCHAR(400) NOT NULL,
+  name VARCHAR(200) NOT NULL,
+  surname VARCHAR(200) NOT NULL,
+  created timestamp
+);
+
