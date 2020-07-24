@@ -16,7 +16,7 @@ public class OrderController {
 
     private final OrderService orderService;
 
-    @GetMapping("/posts")
+    @GetMapping("/orders")
     public List<OrderDto> getPosts(@RequestParam(required = false) Integer page, Sort.Direction sort){
         int pageNumber = page != null && page >= 0 ? page : 0;
         Sort.Direction sortDirection = sort != null ? sort : Sort.Direction.ASC;
