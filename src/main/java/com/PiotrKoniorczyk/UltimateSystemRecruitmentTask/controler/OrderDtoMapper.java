@@ -20,7 +20,7 @@ public class OrderDtoMapper {
     private static OrderDto mapToOrderDto(Order order) {
         return OrderDto.builder()
                 .id(order.getId())
-                .productName(order.getProductName())
+                .productName(order.getProductname())
                 .name(order.getName())
                 .surname(order.getSurname())
                 .created(order.getCreated())

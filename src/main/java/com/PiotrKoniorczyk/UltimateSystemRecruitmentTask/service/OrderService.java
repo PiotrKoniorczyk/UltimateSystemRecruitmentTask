@@ -37,7 +37,7 @@ public class OrderService {
     @Transactional
     public Order editOrder(Order order) {
         Order orderEdited = orderRepository.findById(order.getId()).orElseThrow();
-        orderEdited.setProductName(order.getProductName());
+        orderEdited.setProductname(order.getProductname());
         orderEdited.setName(order.getName());
         orderEdited.setSurname(order.getSurname());
         return orderEdited;
